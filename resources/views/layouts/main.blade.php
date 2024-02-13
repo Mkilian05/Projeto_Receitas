@@ -23,6 +23,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
             <div class="container">
                 <a class="navbar-brand" href="#">
+                    <img src="{{ asset('images/logo-receitas.png') }}" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top me-2">
                     Receitas
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -75,6 +77,11 @@
                                 </form>
                             </div>
                         </li>
+
+                        <form class="d-flex ms-5" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
 
                     </ul>
                 </div>
