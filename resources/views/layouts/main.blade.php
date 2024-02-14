@@ -17,6 +17,11 @@
         hr.solid {
             border-top: 1px solid #bbb;
         }
+
+        img.img_logo:hover {
+            transition: transform 0.5s ease-in-out;
+            transform: scale(1.3);
+            }
     </style>
 
     <div class="container-fluid">
@@ -24,7 +29,7 @@
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('images/logo-receitas.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top me-2">
+                        class="d-inline-block align-text-top me-2 img_logo">
                     Receitas
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -58,8 +63,13 @@
                             <a class="nav-link active" href="#">Adicionar Receitas</a>
                         </li>
 
+                        @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link active dropdown-toggle" href="#" role="button"
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
@@ -77,10 +87,13 @@
                                 </form>
                             </div>
                         </li>
+                        @endguest
 
                         <form class="d-flex ms-5" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar..."
+                                aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
 
                     </ul>
