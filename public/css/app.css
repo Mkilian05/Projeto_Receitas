@@ -10819,3 +10819,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.card-home-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-home-hover:hover {
+  transform: scale(1.05);
+}

@@ -6,3 +6,14 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+// Transição de card
+
+.card-home-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-home-hover:hover {
+    transform: scale(1.05);
+}

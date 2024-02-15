@@ -33,6 +33,25 @@
             </div>
         </div>
         {{--  Fim Grupo de Cards  --}}
+
+        {{--  Card foreach - Todas as Receitas  --}}
+
+        <h1 class="py-5 text-center">Todas as Receitas</h1>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card card-home-hover text-center">
+                    <img src="{{  asset('images/Receitas_Doces.png')  }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{--  Fim Card foreach - Todas as Receitas  --}}
     </div>
     </div>
 @endsection
