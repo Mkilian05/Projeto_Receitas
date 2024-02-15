@@ -1,8 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/images/logo-receitas.png": "/images/logo-receitas.png",
-    "/images/receitas_doces.jpg": "/images/receitas_doces.jpg",
     "/images/Receitas_Doces.png": "/images/Receitas_Doces.png",
-    "/images/Receitas_Salgadas.png": "/images/Receitas_Salgadas.png"
+    "/images/Receitas_Salgadas.png": "/images/Receitas_Salgadas.png",
+    "/images/logo-receitas.png": "/images/logo-receitas.png",
+    "/images/receitas_doces.jpg": "/images/receitas_doces.jpg"
 }
