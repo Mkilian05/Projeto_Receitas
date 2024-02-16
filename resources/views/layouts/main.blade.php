@@ -44,7 +44,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="{{  route('home')  }}">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link active dropdown-toggle" href="#" role="button"
@@ -65,7 +65,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Adicionar Receitas</a>
+                            <a class="nav-link active" href="{{  route('receitas.addrec')  }}">Adicionar Receitas</a>
                         </li>
 
                         @guest

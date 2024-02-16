@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    HomeController,
+    AddReceitasController,
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::name('receitas.')->group(function(){
+    Route::get('adicionar-receitas', [AddReceitasController::class, 'viewPage'])->name('addrec');
+});
