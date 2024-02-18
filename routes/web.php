@@ -22,6 +22,8 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::name('receitas.')->group(function(){
+Route::name('receitas.')->prefix('receitas')->group(function(){
     Route::get('adicionar-receitas', [AddReceitasController::class, 'viewPage'])->name('addrec');
+    Route::post('salvar-receita', [AddReceitasController::class, 'store'])->name('store-rec');
+
 });
