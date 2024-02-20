@@ -60,13 +60,16 @@
                                 <a class="dropdown-item" href="#">
                                     Doces
                                 </a>
+                                <hr>
+                                <a class="dropdown-item" href="{{  route('receitas.addrec')  }}">
+                                    Adicionar Receitas
+                                </a>
+                                <hr>
+                                <a class="dropdown-item" href="{{ route('receitas.admrec')  }}">
+                                    Gerenciar Receitas
+                                </a>
 
                             </div>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{  route('receitas.addrec')  }}">Adicionar Receitas</a>
-                        </li>
 
                         @guest
                             <li class="nav-item">

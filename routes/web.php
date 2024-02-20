@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     HomeController,
-    AddReceitasController,
+    ReceitasController,
 };
 
 /*
@@ -23,7 +23,11 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::name('receitas.')->prefix('receitas')->group(function(){
-    Route::get('adicionar-receitas', [AddReceitasController::class, 'viewPage'])->name('addrec');
-    Route::post('salvar-receita', [AddReceitasController::class, 'store'])->name('store-rec');
+    // Rotas de visualização de páginas
+    Route::get('adicionar-receitas', [ReceitasController::class, 'viewPage'])->name('addrec');
+    Route::get('gerenciar-receitas', [ReceitasController::class, 'viewAdmin'])->name('admrec');
+
+    // Rotas de gerência
+    Route::post('salvar-receita', [ReceitasController::class, 'store'])->name('store-rec');
 
 });
