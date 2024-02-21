@@ -9,7 +9,7 @@
                         <h2 class="text-center">Adicionar Receita</h2>
                     </div>
                     <div class="card-body">
-                        <form action="{{  route('update-edit-rec', 'id'=>$receitas->id)  }}" method="POST">
+                        <form action="{{  route('receitas.update-edit-rec', $receitas->id)  }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
