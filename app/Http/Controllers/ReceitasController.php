@@ -14,10 +14,11 @@ class ReceitasController extends Controller
     }
 
     public function viewAdmin(){
-        return view('admin_receitas');
+        $receitas = Receita::all();
+        return view('admin_receitas', ['receitas'=>$receitas]);
     }
 
-    // Funções de gereência
+    // Funções de gerência
     public function store(ReceitaRequest $request){
         Receita::create($request->all());
         return redirect()->route('receitas.addrec')->with('success', 'Receita Adicionada com Sucesso!');
