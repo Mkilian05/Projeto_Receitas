@@ -29,5 +29,6 @@ Route::name('receitas.')->prefix('receitas')->group(function(){
 
     // Rotas de gerência
     Route::post('salvar-receita', [ReceitasController::class, 'store'])->name('store-rec');
-
+    Route::get('receita/excluir/{id}', [ReceitasController::class, 'delete'])->name('del-rec');
+    Route::get('receita/editar/{id}', [ReceitasController::class, 'viewEditRec'])->name('view-edit-rec');
 });

@@ -20,8 +20,8 @@
                     <td>{{ $receita->categoria }}</td>
                     <td>{{ $receita->ingredientes }}</td>
                     <td>
-                        <a class="btn btn-danger"> Excluir </a>
-                        <a class="btn btn-success"> Editar </a>
+                        <a href="{{  route('receitas.del-rec', $receita->id)  }}" class="btn btn-danger"> Excluir </a>
+                        <a href="{{  route('receitas.view-edit-rec', $receita->id  )}}" class="btn btn-success"> Editar </a>
                     </td>
                 </tr>
             @endforeach

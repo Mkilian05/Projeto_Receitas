@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('img_card');
             $table->string('img_receita');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
