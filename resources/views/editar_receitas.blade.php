@@ -19,7 +19,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Ingredientes:</label>
-                                <textarea style="height: 125px !important" name="ingredientes" class="form-control" value="{{  $receitas->ingredientes  }}"></textarea>
+                                <textarea style="height: 125px !important" name="ingredientes" class="form-control" >{{  $receitas->ingredientes  }}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Categoria:</label>
