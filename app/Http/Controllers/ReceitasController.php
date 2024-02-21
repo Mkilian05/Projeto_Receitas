@@ -43,9 +43,9 @@ class ReceitasController extends Controller
     public function viewEditRec(int $id){
         $receitas = Receita::where('id', $id)->first();
         if(empty($receitas)){
-            return view('receitas.editrec', ['receitas'=>$receitas]);
+            return view('receitas.admrec', ['receitas'=>$receitas]);
         }else{
-            return redirect()->route('receitas.admrec');
+            return redirect()->route('receitas.update-edit-rec');
         }
     }
 
