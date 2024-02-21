@@ -13,6 +13,7 @@
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
+                            <input type="hidden" name="id" value="{{  $receitas->id  }}">
                                 <label class="form-label">Nome da Receita:</label>
                                 <input type="text" name="nome" class="form-control" value="{{  $receitas->nome  }}">
                             </div>

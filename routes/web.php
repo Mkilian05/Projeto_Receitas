@@ -31,5 +31,5 @@ Route::name('receitas.')->prefix('receitas')->group(function(){
     Route::post('salvar-receita', [ReceitasController::class, 'store'])->name('store-rec');
     Route::get('receita/excluir/{id}', [ReceitasController::class, 'delete'])->name('del-rec');
     Route::get('editar/{id}', [ReceitasController::class, 'viewEditRec'])->name('view-edit-rec');
-    Route::put('receita/confirrmar-edicao/{id}', [ReceitasController::class, 'updateRec'])->name('update-edit-rec');
+    Route::put('confirmar-edicao/{id}', [ReceitasController::class, 'updateRec'])->name('update-edit-rec');
 });
