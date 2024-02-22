@@ -42,7 +42,6 @@ class ReceitasController extends Controller
 
     public function viewEditRec($id){
         $receitas = Receita::where('id', $id)->first();
-        // dd($receitas);
         if(!empty($receitas)){
             return view('editar_receitas', ['receitas'=>$receitas]);
         }else{
