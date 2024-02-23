@@ -20,7 +20,7 @@
                     <td>{{ $receita->categoria }}</td>
                     <td>{{ $receita->ingredientes }}</td>
                     <td>
-                        <a href="{{  route('receitas.del-rec', $receita->id)  }}" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir a Receita')"> Excluir </a>
+                        <a href="{{  route('receitas.del-rec', $receita->id)  }}" class="btn btn-danger delete" onclick="return confirm('Tem certeza que deseja excluir a Receita')"> Excluir </a>
                         <a href="{{  route('receitas.view-edit-rec', $receita->id  )}}" class="btn btn-success"> Editar </a>
                     </td>
                 </tr>
