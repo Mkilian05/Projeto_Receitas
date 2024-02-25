@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ReceitaRequest;
 use App\Models\Receita;
 use Exception;
@@ -33,10 +34,10 @@ class ReceitasController extends Controller
     {
         try {
             Receita::where('id', $id)->delete();
-            return redirect()->route('receitas.admrec')->with('success', 'Receita removida com êxito!');
+            return response()->json(['message' => 'Receita removida com êxito!'], 200);
         } catch (Exception $e) {
             Log::error('Erro ao remover Receita. Error =>' . $e->getMessage());
-            return redirect()->route('receitas.admrec')->with('danger', 'Houve um erro ao remover a Receita!');
+            return response()->json(['message' => 'Houve um erro ao remover a Receita!'], 500);
         }
     }
 

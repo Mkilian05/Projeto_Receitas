@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/7a775d7d8d.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -109,6 +109,10 @@
             </div>
         </nav>
 
+        <div id="pageloader">
+            <img src="{{ url('images/loading.gif') }}" alt="processing..." />
+        </div>
+
         @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
@@ -154,7 +158,15 @@
         </footer>
 
     </div>
-
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    @yield('pageScripts')
 </body>
 
 </html>

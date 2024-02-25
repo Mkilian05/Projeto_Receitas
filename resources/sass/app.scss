@@ -6,7 +6,34 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+#pageloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100vw !important;
+    min-height: 100vw !important;
+    background: rgba(55, 55, 55, 0.2);
+    display: none;
+    height: 100%;
+    z-index: 9999;
+}
+
+#pageloader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
 
 // Transição de card
 
