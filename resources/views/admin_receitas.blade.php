@@ -21,12 +21,7 @@
                 <td>{{ $receita->categoria }}</td>
                 <td>{{ $receita->ingredientes }}</td>
                 <td>
-                    {{--  <form method="GET" action="{{ route('receitas.del-rec', $receita->id)}}">
-                        <button id="btnTeste" class="btn btn-danger">Excluir</button>
-                    </form>  --}}
                     <button class="btn btn-danger remover" id="{{$receita->id}}"> Excluir </button>
-                    {{--  <a id="btnTeste" href="{{  route('receitas.del-rec', $receita->id)  }}"
-                        class="btn btn-danger delete"> Excluir </a>  --}}
                     <a href="{{  route('receitas.view-edit-rec', $receita->id  )  }}" class="btn btn-success"> Editar </a>
                 </td>
             </tr>
