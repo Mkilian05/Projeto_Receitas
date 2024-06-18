@@ -1,10 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid mt-5">
-
-        {{--  Imagem/Banner  --}}
-        <img src="..." class="img-fluid" alt="...">
+    <div class="container-fluid mt-3">
 
         {{--  Grupo de Cards  --}}
         <div class="card-group">
@@ -36,7 +33,8 @@
 
         {{--  Card foreach - Todas as Receitas  --}}
 
-        <h1 class="py-5 text-center">Todas as Receitas</h1>
+        <h2 class="py-2 mt-2 text-center">Todas as Receitas</h2>
+        <hr>
 
         <div class="row">
             <div class="col-sm-3">
@@ -45,7 +43,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="{{ route('receitas.ver-receita') }}" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>

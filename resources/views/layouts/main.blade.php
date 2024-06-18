@@ -27,14 +27,18 @@
             text-decoration: underline;
             color: black !important;
         }
+
+        #efeito:hover{
+            text-decoration: underline;
+            transition: transform 0.5s ease-in-out;
+            transform: scale(1.1);
+        }
     </style>
 
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
             <div class="container">
-                <a class="navbar-brand" href="{{  route('home')  }}">
-                    <img src="{{ asset('images/logo-receitas.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top me-2 img_logo">
+                <a class="navbar-brand" href="{{  route('home')  }}" id="efeito">
                     Receitas
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

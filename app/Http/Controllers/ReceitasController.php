@@ -23,6 +23,11 @@ class ReceitasController extends Controller
         return view('admin_receitas', ['receitas' => $receitas]);
     }
 
+    public function viewReceitas()
+    {
+        return view('receitas');
+    }
+
     // Funções de gerência
     public function store(ReceitaRequest $request)
     {

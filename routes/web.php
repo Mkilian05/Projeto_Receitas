@@ -26,6 +26,7 @@ Route::name('receitas.')->prefix('receitas')->group(function(){
     // Rotas de visualização de páginas
     Route::get('adicionar-receitas', [ReceitasController::class, 'viewPage'])->name('addrec');
     Route::get('gerenciar-receitas', [ReceitasController::class, 'viewAdmin'])->name('admrec');
+    Route::get('receitas', [ReceitasController::class, 'viewReceitas'])->name('ver-receita');
 
     // Rotas de gerência
     Route::post('salvar-receita', [ReceitasController::class, 'store'])->name('store-rec');
