@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\ReceitaRequest;
-use App\Models\Receita;
 use Exception;
+use App\Models\Receita;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ReceitaRequest;
 
 class ReceitasController extends Controller
 {
@@ -23,9 +24,10 @@ class ReceitasController extends Controller
         return view('admin_receitas', ['receitas' => $receitas]);
     }
 
-    public function viewReceitas()
+    public function viewReceitas(ReceitaRequest $request)
     {
-        return view('receitas');
+        $model = new Receita;
+        $model->slug = Str::slug($request->slug,'-');
     }
 
     // Funções de gerência
