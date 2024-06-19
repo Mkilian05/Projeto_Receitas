@@ -24,15 +24,16 @@ class ReceitasController extends Controller
         return view('admin_receitas', ['receitas' => $receitas]);
     }
 
-    public function viewReceitas(ReceitaRequest $request)
+    public function viewReceitas($slug)
     {
-        $model = new Receita;
-        $model->slug = Str::slug($request->slug,'-');
+        $model = Receita::where('slug', $slug)->first();
+        return view('receitas', ['receita' => $model]);
     }
 
     // Funções de gerência
     public function store(ReceitaRequest $request)
     {
+        $request->merge(['slug' => Str::slug($request->slug,'-')]);
         Receita::create($request->all());
         return redirect()->route('receitas.addrec')->with('success', 'Receita Adicionada com Sucesso!');
     }

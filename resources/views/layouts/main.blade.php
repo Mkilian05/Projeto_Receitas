@@ -33,6 +33,12 @@
             transition: transform 0.5s ease-in-out;
             transform: scale(1.1);
         }
+
+        .persofooter{
+            background-color: #fff !important;
+        }
+
+
     </style>
 
     <div class="container-fluid">
@@ -140,7 +146,7 @@
 
         @yield('content')
 
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-4 my-4 border-top">
+        <footer class="d-flex flex-wrap persofooter justify-content-between align-items-center py-3 mt-2 px-4 border-top">
             <p class="col-md-4 mb-0 text-muted">© @php echo date('F j, Y'); @endphp Mkilian05</p>
 
             <a href="/"
@@ -152,12 +158,10 @@
 
             <ul class="nav col-md-4 justify-content-end">
                 <li class="nav-item"><a href="{{  route('home')  }}" class="nav-link px-2 text-muted ">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Adicionar Receitas</a></li>
+                <li class="nav-item"><a href="{{  route('receitas.addrec'  )}}" class="nav-link px-2 text-muted">Adicionar Receitas</a></li>
                 <li class="nav-item"><a href="{{  route('login'  )}}" class="nav-link px-2 text-muted">Login</a></li>
-                <li class="nav-item"><a href="{{  route('register')  }}"
-                        class="nav-link px-2 text-muted">Registre-se</a></li>
-                <li class="nav-item"><a href=" https://github.com/Mkilian05/Projeto_Receitas "
-                        class="nav-link px-2 text-muted">Github</a></li>
+                <li class="nav-item"><a href="{{  route('register')  }}" class="nav-link px-2 text-muted">Registre-se</a></li>
+                <li class="nav-item"><a href="https://github.com/Mkilian05/Projeto_Receitas" class="nav-link px-2 text-muted">Github</a></li>
             </ul>
         </footer>
 

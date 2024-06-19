@@ -9,7 +9,7 @@
                 <th scope="col">*</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Categoria</th>
-                <th scope="col">Ingredientes</th>
+                {{--  <th scope="col">Ingredientes</th>  --}}
                 <th scope="col">Gerenciamento</th>
             </tr>
         </thead>
@@ -19,7 +19,7 @@
                 <th scope="row">{{ $receita->id }}</th>
                 <td>{{ $receita->nome }}</td>
                 <td>{{ $receita->categoria }}</td>
-                <td>{{ $receita->ingredientes }}</td>
+                {{--  <td>{{ $receita->ingredientes }}</td>  --}}
                 <td>
                     <button class="btn btn-danger remover" id="{{$receita->id}}"> Excluir </button>
                     <a href="{{  route('receitas.view-edit-rec', $receita->id  )  }}" class="btn btn-success"> Editar </a>
